@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung – Geiseltalsee Safety Guide</title>
+    <meta name="description" content="Fordere deinen Einladungslink für die Geiseltalsee Mitmach-Plattform an.">
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        .register-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(8, 64, 58, 0.05), rgba(62, 143, 140, 0.1));
+        }
+
+        .form-card {
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            max-width: 600px;
+            width: 100%;
+            border-top: 8px solid var(--primary-turquise);
+        }
+
+        .form-card h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-card p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--secondary-dark-green);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 18px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-turquise);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-top: 5px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary-turquise);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--secondary-dark-green);
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .success-message .icon {
+            font-size: 4rem;
+            color: var(--primary-turquise);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" style="position: relative; background: var(--secondary-dark-green); padding: 15px 0;">
+        <div class="container">
+            <a href="index.html">
+                <img src="/safer-shorelines-logo.png" alt="Safer Shorelines Logo" class="brand-logo">
+            </a>
+        </div>
+    </nav>
+
+    <div class="register-container" style="min-height: calc(100vh - 80px);">
+        <div class="form-card">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="/safety-guide-logo.png" alt="Geiseltalsee Safety Guide"
+                    style="height: 100px; width: auto; margin-bottom: 10px;">
+            </div>
+            <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+
+            <div id="registration-form">
+                <h1>Mach mit am Geiseltalsee</h1>
+                <p class="subtitle">Werde Teil der Community und hilf uns, den See noch sicherer zu machen.</p>
+
+                <form id="invite-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Dein vollständiger Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-Mail Adresse</label>
+                        <input type="email" id="email" name="email" placeholder="beispiel@mail.de" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">Wie möchtest du dich einbringen?</label>
+                        <select id="interest" name="interest">
+                            <option value="ideas">Ich habe Ideen für mehr Sicherheit</option>
+                            <option value="nearmiss">Ich möchte Near-Miss Situationen melden</option>
+                            <option value="both">Beides</option>
+                            <option value="other">Anderes Interesse</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Kurze Nachricht (optional)</label>
+                        <textarea id="message" name="message" rows="3"
+                            placeholder="Erzähl uns kurz, warum du dabei sein möchtest."></textarea>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="privacy" required>
+                        <label for="privacy" style="font-weight: normal; font-size: 0.9rem;">Ich stimme zu, dass meine
+                            Daten zum Zweck der Einladung verarbeitet werden dürfen. *</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; font-size: 1.1rem; margin-top: 10px;">Einladungslink beantragen</button>
+                </form>
+            </div>
+
+            <div id="success-screen" class="success-message">
+                <div class="icon">✅</div>
+                <h2>Anfrage gesendet!</h2>
+                <p>Vielen Dank für dein Interesse. Wir prüfen deine Anfrage und senden dir in Kürze einen Einladungslink
+                    an deine E-Mail Adresse.</p>
+                <a href="index.html" class="btn btn-primary" style="margin-top: 30px;">Zurück zur Startseite</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('invite-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('registration-form').style.display = 'none';
+            document.getElementById('success-screen').style.display = 'block';
+            console.log('Form submitted:', {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                interest: document.getElementById('interest').value,
+                message: document.getElementById('message').value
+            });
+        });
+    </script>
+</body>
+
+</html>
