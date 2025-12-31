@@ -127,7 +127,7 @@
                 <h1>Mach mit am Geiseltalsee</h1>
                 <p class="subtitle">Werde Teil der Community und hilf uns, den See noch sicherer zu machen.</p>
 
-                <form id="invite-form">
+                <form id="invite-form" name="registration" data-netlify="true">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Dein vollständiger Name" required>
@@ -176,16 +176,22 @@
     </div>
 
     <script>
-        document.getElementById('invite-form').addEventListener('submit', (e) => {
+        document.getElementById('invite-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            document.getElementById('registration-form').style.display = 'none';
-            document.getElementById('success-screen').style.display = 'block';
-            console.log('Form submitted:', {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                interest: document.getElementById('interest').value,
-                message: document.getElementById('message').value
-            });
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+                .then(() => {
+                    document.getElementById('registration-form').style.display = 'none';
+                    document.getElementById('success-screen').style.display = 'block';
+                })
+                .catch((error) => alert(error));
         });
     </script>
 </body>
