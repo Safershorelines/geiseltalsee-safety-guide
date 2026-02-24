@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beinahe-Unfall melden | Geiseltalsee</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--secondary-dark-green);
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html">Start</a>
+                <a href="zonen.html">Zonenkarte</a>
+                <a href="near-miss.html" class="active">Meldung</a>
+                <a href="downloads.html">Downloads</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active">DE</button>
+                <button class="lang-btn">EN</button>
+                <button class="lang-btn">PL</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="padding: 60px 20px;">
+        <div class="section-header">
+            <h1>Beinahe-Unfall melden</h1>
+            <div class="badge">Near-Miss Reporting</div>
+        </div>
+
+        <div class="form-container">
+            <form name="near-miss" method="POST" data-netlify="true">
+                <div class="form-group">
+                    <label>Standort der Beobachtung</label>
+                    <input type="text" name="location" placeholder="z.B. Marina Mücheln oder Pin/GPS">
+                </div>
+                <div class="form-group">
+                    <label>Beteiligte Sportart / Aktivität</label>
+                    <select name="activity">
+                        <option value="">Bitte wählen...</option>
+                        <option value="bootsverkehr">Bootsverkehr</option>
+                        <option value="tauchen">Tauchen</option>
+                        <option value="kitesurfen">Kitesurfen</option>
+                        <option value="baden">Baden</option>
+                        <option value="radfahrer">Radfahrer / Uferweg</option>
+                        <option value="sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Beschreibung des Vorfalls</label>
+                    <textarea name="description" rows="5" placeholder="Was ist passiert? Wann war das?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Foto-Upload (optional)</label>
+                    <input type="file" name="photo">
+                </div>
+                <div class="form-group">
+                    <label>Kontakt für Rückfragen (optional)</label>
+                    <input type="email" name="contact" placeholder="ihre@mail.com">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">MELDUNG ABSENDEN</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="partnership">
+                    <p>Sicherheitskonzept in Kooperation mit</p>
+                    <img src="public/safer-shorelines-logo.png" alt="Safer Shorelines" class="footer-logo-small">
+                </div>
+                <p class="copyright">© 2026 Geiseltalsee Sicherheitskonzept</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

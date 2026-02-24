@@ -4,42 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEE Safety Guide – Geiseltalsee | Safer Shorelines</title>
+    <title>Sicherheitskonzept Geiseltalsee | Projekt-Guide</title>
     <meta name="description"
-        content="Gemeinsam für ein sicheres Erlebnis am größten künstlichen See Deutschlands. Entdecke die 10 Goldenen Regeln und Nutzungszonen am Geiseltalsee.">
+        content="Offizielle Informationen zum Sicherheitskonzept Geiseltalsee. Aktuelle Regelungen, Zonen und Sicherheitsleitfaden für Wassersport und Erholung.">
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar">
         <div class="container">
-            <!-- Logo removed from navbar as requested -->
+            <div class="nav-links">
+                <a href="index.html" class="active">Start</a>
+                <a href="zonen.html">Zonenkarte</a>
+                <a href="near-miss.html">Meldung</a>
+                <a href="downloads.html">Downloads</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active">DE</button>
+                <button class="lang-btn">EN</button>
+                <button class="lang-btn">PL</button>
+            </div>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <div class="glass" style="padding: 40px; border-radius: 30px;">
-                <img src="/safety-guide-logo.png" alt="Geiseltalsee Safety Guide Logo" class="main-logo">
-                <h1>SEE Safety Guide – Geiseltalsee</h1>
-                <p>Gemeinsam für ein sicheres Erlebnis am größten künstlichen See Deutschlands.</p>
+            <div class="hero-content">
+                <h1>Sicherheitskonzept Geiseltalsee</h1>
+                <p class="subtitle">Zentrale Informationsplattform für ein sicheres Miteinander am See.</p>
                 <div class="mission-box">
-                    <h2>🌊 Unsere Mission</h2>
-                    <p>Der Geiseltalsee ist ein einzigartiges Naherholungsgebiet. Unser Ziel ist ein einheitliches
-                        Sicherheitskonzept, das Wassersport, Erholung und Naturschutz harmonisch verbindet. Wir machen
-                        Schluss mit dem Regel-Dschungel: Klare Zonen und digitale Helfer sorgen dafür, dass du deinen
-                        Tag am See unbeschwert genießen kannst.</p>
+                    <h2>Offizieller Status</h2>
+                    <p>Dieses Portal bündelt alle sicherheitsrelevanten Informationen, Zonenregelungen und operativen
+                        Module für den Geiseltalsee. Unser Ziel ist die harmonische Verbindung von Wassersport, Erholung
+                        und Naturschutz auf Basis der aktuellen Allgemeinverfügung.</p>
                 </div>
             </div>
         </div>
     </header>
+
+    <section class="current-developments">
+        <div class="container">
+            <div class="section-header">
+                <h2>Aktuelle Entwicklungen & Regelungen</h2>
+                <div class="badge">Saison 2026</div>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Saisonale Freigabe</h3>
+                    <p>Die Hauptfreigabe für den See erfolgt saisonal von <strong>April bis Oktober</strong>. In diesem
+                        Zeitraum gelten die erweiterten Nutzungsregeln.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Operative Zonen</h3>
+                    <p>Der hintere Seebereich ist für <strong>Bootsverkehr und Tauchen</strong> freigegeben. Bitte
+                        beachten Sie die spezifischen Bojenketten.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Kitesurfen</h3>
+                    <p>Ein fester Bereich für Kitesurfen im westlichen Seeteil ist nach Inkrafttreten der neuen
+                        Regelungen vorgesehen.</p>
+                </div>
+            </div>
+            <div class="map-preview-container">
+                <div class="map-placeholder">
+                    <span>Zonenkarte wird geladen...</span>
+                    <a href="zonen.html" class="btn btn-outline">Zur interaktiven Karte</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="infographic-section">
         <div class="container">
             <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px;">🎨 Sicherheitsregeln im Überblick
             </h2>
             <div class="infographic-container">
-                <img src="/geiseltalsee-infografik.jpg" alt="Sicher am Geiseltalsee Infografik" class="infographic-img">
+                <img src="public/geiseltalsee-infografik.jpg" alt="Sicher am Geiseltalsee Infografik"
+                    class="infographic-img">
             </div>
         </div>
     </section>
@@ -48,7 +94,7 @@
         <div class="container">
             <a href="https://serviceaustria.blog/wp-content/uploads/2025/12/geiseltalsee_20251230.pdf" target="_blank"
                 class="project-plan-card">
-                <img src="/project-plan-icon.jpg" alt="Projekt Plan Icon" class="project-plan-icon">
+                <img src="public/project-plan-icon.jpg" alt="Projekt Plan Icon" class="project-plan-icon">
                 <div class="project-plan-content">
                     <h3>Projekt Plan 2026</h3>
                     <p>Hier finden Sie alle Details zum aktuellen Sicherheitskonzept und der Roadmap für den
@@ -399,9 +445,24 @@
 
     <footer>
         <div class="container">
-            <img src="/safer-shorelines-logo.png" alt="Safer Shorelines" class="footer-logo">
-            <p>Ein Projekt von Heiko Günzel & Dieter Heinz mit Unterstützung von Safer Shorelines.</p>
-            <p style="margin-top: 10px; opacity: 0.7;">© 2026 Geiseltalsee Safety Guide</p>
+            <div class="footer-content">
+                <div class="partnership">
+                    <p>Sicherheitskonzept in Kooperation mit</p>
+                    <img src="public/safer-shorelines-logo.png" alt="Safer Shorelines" class="footer-logo-small">
+                </div>
+                <div class="footer-info">
+                    <div class="footer-contact">
+                        <p><strong>Dieter Heinz</strong></p>
+                        <p><a href="mailto:dieter.heinz@safershorelines.com">dieter.heinz@safershorelines.com</a></p>
+                        <p>Tel: +43 660 221 0001</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.safershorelines.com" target="_blank" rel="noopener">www.safershorelines.com</a>
+                    <a href="impressum.html">Impressum</a>
+                </div>
+                <p class="copyright">© 2026 Geiseltalsee Sicherheitskonzept | Heiko Günzel & Dieter Heinz</p>
+            </div>
         </div>
     </footer>
 

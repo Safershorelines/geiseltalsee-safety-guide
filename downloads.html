@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner & Arbeitsmaterial | Geiseltalsee</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .download-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .download-card .icon {
+            font-size: 2.5rem;
+        }
+
+        .download-card h3 {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .download-card p {
+            font-size: 0.9rem;
+            color: #666;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html">Start</a>
+                <a href="zonen.html">Zonenkarte</a>
+                <a href="near-miss.html">Meldung</a>
+                <a href="downloads.html" class="active">Downloads</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active">DE</button>
+                <button class="lang-btn">EN</button>
+                <button class="lang-btn">PL</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="padding: 60px 20px;">
+        <div class="section-header">
+            <h1>Partner & Arbeitsmaterial</h1>
+            <div class="badge">Downloads</div>
+        </div>
+
+        <div class="download-grid">
+            <div class="download-card">
+                <div class="icon">📜</div>
+                <h3>Selbstverpflichtung</h3>
+                <p>Leitfaden und Selbstverpflichtung für Betreiber am See (PDF).</p>
+                <a href="public/Premium_Betreiber_Selbstverpflichtung.pdf" target="_blank" class="btn btn-outline"
+                    style="font-size: 0.9rem;">DOWNLOAD ↗</a>
+            </div>
+            <div class="download-card">
+                <div class="icon">⚓</div>
+                <h3>Skipper-Briefing</h3>
+                <p>Offizielle Vorlage für das Sicherheits-Briefing von Bootsgästen.</p>
+                <a href="public/Premium_Skipper_Briefing.pdf" target="_blank" class="btn btn-outline"
+                    style="font-size: 0.9rem;">DOWNLOAD ↗</a>
+            </div>
+            <div class="download-card">
+                <div class="icon">📅</div>
+                <h3>Saison-Regeln</h3>
+                <p>Aktuelle Regeländerungen und saisonale Hinweise 2026.</p>
+                <a href="public/Premium_Saison_Regelaenderung.pdf" target="_blank" class="btn btn-outline"
+                    style="font-size: 0.9rem;">DOWNLOAD ↗</a>
+            </div>
+            <div class="download-card">
+                <div class="icon">📝</div>
+                <h3>Near-Miss Formular</h3>
+                <p>Meldeformular für Beinahe-Unfälle in der PDF-Version.</p>
+                <a href="public/Premium_Near_Miss_Meldung.pdf" target="_blank" class="btn btn-outline"
+                    style="font-size: 0.9rem;">DOWNLOAD ↗</a>
+            </div>
+            <div class="download-card">
+                <div class="icon">📍</div>
+                <h3>Standort-Checkliste</h3>
+                <p>Checkliste für die Sicherheitsbewertung von Standorten.</p>
+                <a href="public/Premium_Standort_Checkliste.pdf" target="_blank" class="btn btn-outline"
+                    style="font-size: 0.9rem;">DOWNLOAD ↗</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="partnership">
+                    <p>Sicherheitskonzept in Kooperation mit</p>
+                    <img src="public/safer-shorelines-logo.png" alt="Safer Shorelines" class="footer-logo-small">
+                </div>
+                <p class="copyright">© 2026 Geiseltalsee Sicherheitskonzept</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicherheitszonen & Nutzungsbereiche | Geiseltalsee</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html">Start</a>
+                <a href="zonen.html" class="active">Zonenkarte</a>
+                <a href="near-miss.html">Meldung</a>
+                <a href="downloads.html">Downloads</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active">DE</button>
+                <button class="lang-btn">EN</button>
+                <button class="lang-btn">PL</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 60px;">
+        <div class="section-header">
+            <h1>Sicherheitszonen & Nutzungsbereiche</h1>
+            <div class="badge">Karte Visuell</div>
+        </div>
+
+        <div class="map-container"
+            style="height: 600px; background: #eee; border-radius: 20px; overflow: hidden; position: relative;">
+            <div class="map-placeholder-full"
+                style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--accent-light);">
+                <div style="font-size: 4rem; margin-bottom: 20px;">🗺️</div>
+                <p style="font-size: 1.2rem; font-weight: 600;">Interaktive Karte wird vorbereitet</p>
+                <p style="color: #666;">Hier werden zukünftig Tauchzonen, Bootsbereiche und Kite-Zonen visualisiert.</p>
+            </div>
+        </div>
+
+        <section class="zone-details" style="padding: 60px 0;">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>⚓ Bootszonen</h3>
+                    <p>Zulässigkeit für Motorboote bis 20 PS. Beachten Sie die gelben Bojenketten.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🤿 Tauchbereiche</h3>
+                    <p>Feste Einstiegspunkte und Anmeldepflicht an der Basis Frankleben.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🪁 Kite-Zone (Geplant)</h3>
+                    <p>Festgelegter Bereich im Westen nach Inkrafttreten der neuen Verordnung.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🚨 Notfallpunkte</h3>
+                    <p>Nummerierte Rettungspunkte entlang des gesamten Uferrundwegs.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="partnership">
+                    <p>Sicherheitskonzept in Kooperation mit</p>
+                    <img src="public/safer-shorelines-logo.png" alt="Safer Shorelines" class="footer-logo-small">
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.safershorelines.com" target="_blank" rel="noopener">www.safershorelines.com</a>
+                    <a href="impressum.html">Impressum</a>
+                </div>
+                <p class="copyright">© 2026 Geiseltalsee Sicherheitskonzept</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
