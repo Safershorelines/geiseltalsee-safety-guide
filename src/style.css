@@ -169,6 +169,16 @@ section {
   text-align: left;
 }
 
+.hero-logo {
+  max-width: 280px;
+  height: auto;
+  margin-bottom: 30px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  display: block;
+}
+
 .hero h1 {
   color: var(--text-light);
   font-size: 3.5rem;
